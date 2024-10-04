@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var nombre,
+        modulo,
+        evaluacion,
+        contador_s = 0,
+        contador_a = 0,
+        nota = 0,
+        suma_a = 0,
+        suma_s = 0;
+      (media_a = 0), (media_s = 0), (num_a = 0);
+      num_a = parseInt(prompt("Introduce el numero de alumnos"));
+      document.write("<h2 text align=center>Tabla del alumnado</h2>");
+      document.write("<table border=1 text align=center>");
+      document.write(
+        "<tr bgcolor=blue text align=center><td>Nombre<td>Modulo<td>Nota<td>Evaluacion</td></td></td></td></tr>"
+      );
+      for (i = 1; i <= num_a; i++) {
+        nombre = prompt("Introduce el nombre del alumno");
+        modulo = prompt("Introduce el modulo(apweb o seg)");
+        while (!(modulo == "apweb" || modulo == "seg")) {
+          alert("Modulo incorrecto");
+          modulo = prompt("introduce un modulo existente (apweb o seg)");
+        }
+        nota = parseInt(prompt("Introduce la nota"));
+        while (nota < 0 || nota > 10) {
+          alert("Nota incorrecta, introduce ded nuevo");
+          nota = parseInt(prompt("Introduce la nota"));
+        }
+        if (nota < 5) {
+          evaluacion = "No apto";
+        } else {
+          evaluacion = "Apto";
+        }
+        if (modulo == "seg") {
+          suma_s = suma_s + nota;
+        } else {
+          suma_a = suma_a + nota;
+        }
+        if (modulo == "seg") {
+          modulo = "Seguridad Informatica";
+          contador_s = contador_s + 1;
+        } else {
+          modulo = "Aplicaciones Web";
+          contador_a = contador_a + 1;
+        }
+        document.write(
+          "<tr><td>" +
+            nombre +
+            "<td>" +
+            modulo +
+            "<td>" +
+            nota +
+            "<td>" +
+            evaluacion +
+            "</td></td></td></td></tr>"
+        );
+      }
+      media_a = suma_a / contador_a;
+      media_s = suma_s / contador_s;
+      document.write("</table>");
+      document.write(
+        "<p text align=center>La media de notas de aplicaciones web es de: " +
+          media_a +
+          "<br></p>"
+      );
+      document.write(
+        "<p text align=center>La media de notas de seguridad informatica es de: " +
+          media_s +
+          "</p>"
+      );
+    </script>
+  </body>
+</html>
