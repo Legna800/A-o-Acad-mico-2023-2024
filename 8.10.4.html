@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subida de Salario</title>
+  </head>
+  <body>
+    <script>
+      var nombreEmpleado = prompt("Nombre del empleado:");
+      var salario = parseInt(prompt("Salario del empleado:"));
+      var numeroDep = parseInt(prompt("Numero de departamento del empleado:"));
+      var subirSalario;
+      switch (numeroDep) {
+        case 10:
+          subirSalario = 100;
+          break;
+        case 20:
+          subirSalario = (5 * salario) / 100;
+          break;
+        case 30:
+          subirSalario = (4 * salario) / 100;
+          break;
+        default:
+          subirSalario = 75;
+          break;
+      }
+      document.write(
+        "El nombre del empleado es " +
+          nombreEmpleado +
+          " la subida de salario es de " +
+          subirSalario +
+          " y el nuevo salario es de " +
+          (salario + subirSalario)
+      );
+    </script>
+  </body>
+</html>

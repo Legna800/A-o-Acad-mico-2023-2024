@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplos 10</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var cantidad1 = parseFloat(prompt("Introduce una cantidad para edad:"));
+
+      if (cantidad1 === 100) {
+        document.write("<h3>Mayor o menor que 100</h3>");
+        document.write("Edad: " + cantidad1 + "<br />");
+        document.write("Cantidad + 200: " + (cantidad1 + 200) + "<br />");
+      } else if (cantidad1 >= 101 && cantidad1 <= 200) {
+        document.write("<h3>Ejemplo 1</h3>");
+        document.write("Cantidad: " + cantidad1 + "<br />");
+        document.write("Cantidad * 2: " + cantidad1 * 2 + "<br />");
+      } else if (cantidad1 < 0) {
+        document.write("<h3>Ejemplo 1</h3>");
+        document.write("Cantidad: " + cantidad1 + "<br />");
+        document.write("ES NEGATIVA<br />");
+      } else {
+        document.write("<h3>Ejemplo 1</h3>");
+        document.write("Cantidad: " + cantidad1 + "<br />");
+        document.write("Cantidad * 3: " + cantidad1 * 3 + "<br />");
+      }
+    </script>
+  </body>
+</html>

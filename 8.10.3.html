@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Productividad</title>
+  </head>
+  <body>
+    <script>
+      function calcularProductividad() {
+        var numeroMes = parseInt(prompt("Ingrese el número de mes (1-12):"));
+
+        if (numeroMes >= 1 && numeroMes <= 12) {
+          var factorMes = 0;
+
+          switch (numeroMes) {
+            case 1:
+            case 2:
+            case 3:
+              factorMes = 15;
+              break;
+            case 4:
+            case 5:
+            case 6:
+              factorMes = 17;
+              break;
+            case 9:
+            case 10:
+            case 11:
+              factorMes = 20;
+              break;
+            case 12:
+              factorMes = 21;
+              break;
+          }
+
+          var productividad = 100 + factorMes;
+
+          document.write(
+            "El nombre del mes es " +
+              obtenerNombreMes(numeroMes) +
+              " y la productividad es " +
+              productividad +
+              "."
+          );
+        } else {
+          document.write(
+            "Error en el mes. Por favor, ingrese un número de mes válido (1-12)."
+          );
+        }
+      }
+
+      function obtenerNombreMes(numeroMes) {
+        var nombresMeses = [
+          "enero",
+          "febrero",
+          "marzo",
+          "abril",
+          "mayo",
+          "junio",
+          "julio",
+          "agosto",
+          "septiembre",
+          "octubre",
+          "noviembre",
+          "diciembre",
+        ];
+        return nombresMeses[numeroMes - 1];
+      }
+
+      calcularProductividad();
+    </script>
+  </body>
+</html>

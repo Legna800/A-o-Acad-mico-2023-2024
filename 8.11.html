@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 13.1</title>
+  </head>
+  <body>
+    <script>
+      var sexo;
+
+      while (sexo !== "H" && sexo !== "h" && sexo !== "M" && sexo !== "m") {
+        sexo = prompt("Ingrese su sexo (H/h para Hombre, M/m para Mujer):");
+      }
+
+      document.write(
+        "Sexo: " + (sexo.toUpperCase() === "H" ? "Hombre" : "Mujer") + "<br>"
+      );
+    </script>
+  </body>
+</html>

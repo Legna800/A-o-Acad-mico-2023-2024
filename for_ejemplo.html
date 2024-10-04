@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script type="text/javascript">
+      var num = 0,
+        factor = 0;
+      num = parseInt(prompt("introducir Numero", 0));
+      document.write("<table border=1 >");
+      document.write("Tabla de multiplicaciones");
+      document.write(
+        "<tr  bgcolor=yellow><th>Numero<th>Factor</th><th>Resultado</th></th></tr>"
+      );
+      for (i = 1; i <= 10; i++) {
+        factor = factor + 1;
+        res = num * factor;
+        resto = i % 2;
+        if (resto == 0) {
+          document.write(
+            "<tr bgcolor=green><th >" +
+              num +
+              "<th>" +
+              factor +
+              "<th>" +
+              res +
+              "</th></th></th></tr>"
+          );
+        } else
+          +document.write(
+            "<tr bgcolor=blue><th>" +
+              num +
+              "<th>" +
+              factor +
+              "<th>" +
+              res +
+              "</th></th></th></tr>"
+          );
+      }
+      document.write("</table>");
+    </script>
+  </head>
+  <body></body>
+</html>

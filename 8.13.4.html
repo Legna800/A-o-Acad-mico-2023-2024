@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.13 punto 4</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var Nombre,
+        Edad,
+        Cuenta = 0,
+        Media,
+        SumEd = 0;
+
+      while (Cuenta < 3) {
+        Nombre = prompt("Introduce el nombre del alumno");
+        Edad = parseInt(prompt("Introduce la edad entre 13 y 100): ", 0));
+
+        while (Edad < 13 || Edad > 100 || isNaN(Edad)) {
+          alert(
+            "Edad incorrecta. Por favor, introduce una edad entre 13 y 100."
+          );
+          Edad = parseInt(prompt("Introduce la edad entre 13 y 100): ", 0));
+        }
+        SumEd += Edad;
+        Cuenta++;
+      }
+
+      Media = SumEd / 3;
+      document.write(
+        "<h3>La media de la edad introducida es: " + Media + "</h3>"
+      );
+    </script>
+  </body>
+</html>

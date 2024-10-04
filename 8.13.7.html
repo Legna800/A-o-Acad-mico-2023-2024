@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Actividad propuesta 8.13 punto 4</title>
+  </head>
+  <body>
+    <h3>Datos introducidos</h3>
+    <script type="text/javascript">
+      var nom_alumno,
+        ed_alumno,
+        media_e,
+        cuenta = 0,
+        suma_e = 0,
+        suma_n = 0,
+        sexo,
+        hombres = 0,
+        mujeres = 0,
+        media_n,
+        nota;
+
+      do {
+        nom_alumno = prompt("Introduzca el nombre del alumno");
+        ed_alumno = parseInt(prompt("Introduzca la edad del alumno"));
+
+        while (ed_alumno < 13 || ed_alumno > 100) {
+          alert("Edad inválida, vuelva a introducir la edad");
+          ed_alumno = parseInt(prompt("Introduzca la edad del alumno"));
+        }
+
+        sexo = prompt("Introduzca su sexo (h o m)");
+
+        while (sexo !== "h" && sexo !== "H" && sexo !== "m" && sexo !== "M") {
+          alert("Sexo erróneo, introduzca de nuevo");
+          sexo = prompt("Introduzca su sexo (h o m)");
+        }
+
+        nota = parseInt(prompt("Introduzca su nota"));
+
+        while (nota < 0 || nota > 10) {
+          alert("Nota errónea, introduzca de nuevo");
+          nota = parseInt(prompt("Introduzca su nota"));
+        }
+
+        cuenta++;
+        suma_e += ed_alumno;
+        suma_n += nota;
+
+        document.write("<p>Nombre del alumno: " + nom_alumno + "</p>");
+        document.write("<p>Edad del alumno:" + ed_alumno + "</p>");
+        document.write("<p>Sexo del alumno: " + sexo + "</p>");
+        document.write("<p>Nota del alumno: " + nota + "</p> <br>");
+
+        switch (sexo) {
+          case "h":
+          case "H":
+            hombres++;
+            break;
+          case "m":
+          case "M":
+            mujeres++;
+            break;
+        }
+      } while (cuenta < 3);
+
+      media_e = suma_e / cuenta;
+      media_n = suma_n / cuenta;
+
+      document.write("<p> Edad media del alumnado: " + media_e + "</p>");
+      document.write("<p> Número de hombres: " + hombres + "</p>");
+      document.write("<p> Número de mujeres: " + mujeres + "</p>");
+      document.write("<p> Nota media del alumnado: " + media_n + "</p>");
+    </script>
+  </body>
+</html>

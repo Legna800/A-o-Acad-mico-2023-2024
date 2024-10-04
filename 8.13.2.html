@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var Num,
+        Suma = 0,
+        Cuenta = 0,
+        Media;
+
+      do {
+        Num = parseInt(
+          prompt("Introduce un número (cero para finalizar): ", 0)
+        );
+        Suma = Suma + Num;
+        Cuenta = Cuenta + 1;
+      } while (Cuenta != 5);
+
+      document.write("La suma de los números es: " + Suma + "<br>");
+      document.write("El número de números leídos es: " + Cuenta + "<br>");
+
+      if (Cuenta > 0) {
+        Media = Suma / Cuenta;
+      } else {
+        Media = 0;
+      }
+
+      document.write("La media de los números es: " + Media + "<br>");
+    </script>
+  </body>
+</html>

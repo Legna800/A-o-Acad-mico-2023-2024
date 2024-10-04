@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 14.1</title>
+    <script type="text/javascript">
+      var Nota;
+      var sexo;
+      var sexoTexto;
+
+      do {
+        Nota = parseInt(prompt("Introduce la nota del alumno:", 0));
+        if (Nota < 0 || Nota > 10) {
+          alert("Nota errónea " + Nota + ", teclea de nuevo.");
+        }
+      } while (Nota < 0 || Nota > 10);
+      alert("La nota " + Nota + " es correcta");
+
+      do {
+        sexo = prompt(
+          "Introduce el sexo (H/h para Hombre, M/m para Mujer):",
+          ""
+        );
+        if (sexo !== "H" && sexo !== "h" && sexo !== "M" && sexo !== "m") {
+          alert(
+            "Sexo incorrecto, por favor, introduce H/h para Hombre o M/m para Mujer."
+          );
+        }
+      } while (sexo !== "H" && sexo !== "h" && sexo !== "M" && sexo !== "m");
+
+      if (sexo === "H" || sexo === "h") {
+        sexoTexto = "Hombre";
+      } else {
+        sexoTexto = "Mujer";
+      }
+
+      document.write("Nota: " + Nota + "<br>");
+      document.write("Sexo: " + sexoTexto);
+    </script>
+  </head>
+  <body></body>
+</html>

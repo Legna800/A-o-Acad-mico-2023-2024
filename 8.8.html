@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo9_3</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var nombre = prompt("Introduce el nombre del alumno:");
+      var edad = parseInt(prompt("Introduce la edad del alumno:"));
+      var nota = parseFloat(prompt("Introduce la nota del alumno:"));
+
+      var esMayorDeEdad = edad >= 18;
+
+      var resultado = nota >= 5 ? "APROBADO" : "SUSPENSO";
+
+      document.write("<h3>Información del Alumno</h3>");
+      document.write("Nombre: " + nombre + "<br />");
+      document.write("Edad: " + edad + " años" + "<br />");
+      document.write(
+        "Condición: " +
+          (esMayorDeEdad ? "Mayor de Edad" : "Menor de Edad") +
+          "<br />"
+      );
+      document.write("Nota: " + nota.toFixed(2) + "<br />");
+      document.write("Resultado: " + resultado + "<br />");
+    </script>
+  </body>
+</html>

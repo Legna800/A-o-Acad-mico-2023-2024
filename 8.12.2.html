@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 14.2</title>
+    <script type="text/javascript">
+      var numero;
+
+      do {
+        numero = prompt("Introduce un número (0 para finalizar):", "");
+        numero = parseFloat(numero); // Convertimos la entrada a número
+        if (numero !== 0 && isNaN(numero)) {
+          alert("Por favor, introduce un número válido.");
+        } else if (numero !== 0) {
+          document.write("Número introducido: " + numero + "<br>");
+        }
+      } while (numero !== 0);
+    </script>
+  </head>
+  <body></body>
+</html>

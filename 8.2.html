@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 2.1</title>
+  </head>
+  <body>
+    <script>
+      function mostrarDatos() {
+        var nombre = document.getElementById("nombre").value;
+        var edad = document.getElementById("edad").value;
+        var poblacion = document.getElementById("poblacion").value;
+        var centroEstudios = document.getElementById("centroEstudios").value;
+
+        var mensajeAlerta =
+          'Me llamo ' + nombre + ', tengo ' + edad + ' años, vivo en ' + poblacion + ', y estudio en el ' + centroEstudios + '.';
+
+        alert(mensajeAlerta);
+      }
+    </script>
+
+    <h2>Ingresa tus datos:</h2>
+
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" />
+
+      <label for="edad">Edad:</label>
+      <input type="text" id="edad" name="edad" />
+
+      <label for="poblacion">Población:</label>
+      <input type="text" id="poblacion" name="poblacion" />
+
+      <label for="centroEstudios">Centro de Estudios:</label>
+      <input type="text" id="centroEstudios" name="centroEstudios" />
+
+      <br />
+
+      <input type="button" value="Mostrar Datos" onclick="mostrarDatos()" />
+    </form>
+    </table>
+  </body>
+</html>
